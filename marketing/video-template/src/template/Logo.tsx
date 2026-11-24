@@ -3,8 +3,8 @@ import { Img, staticFile } from 'remotion';
 import { BRAND } from '../brand/brand';
 
 /**
- * Brand logo. Uses the real logo file when BRAND.logoFile is set (put the SVG in /public).
- * Until then, a TEXT PLACEHOLDER is drawn. It is not the official logo.
+ * Brand logo (official SVG in /public/brand).
+ * If logoFile is null, a text placeholder is drawn (not the official logo).
  */
 export const Logo: React.FC<{ size: number }> = ({ size }) => {
   if (BRAND.logoFile) {

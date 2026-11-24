@@ -1,6 +1,6 @@
 /**
  * Brand settings for every TickFlowAI video.
- * Colors and fonts come from Sara's identity file. The logo is still a text placeholder until the SVG file arrives.
+ * Colors and fonts come from Sara's identity file. Logo: official SVG from Sara's brand identity folder.
  * Change values here only; never inside a video.
  */
 export const BRAND = {
@@ -26,8 +26,8 @@ export const BRAND = {
     family: 'Inter, system-ui, sans-serif',
     arabic: '"IBM Plex Sans Arabic", Inter, system-ui, sans-serif',
   },
-  /** Set to a file name in /public (for example 'logo.png') when the real logo arrives. */
-  logoFile: null as string | null,
+  /** Real logo (white wordmark, for dark backgrounds), from Sara's brand identity folder. */
+  logoFile: 'brand/logo-dark.svg' as string | null,
 } as const;
 
 /** LinkedIn feed portrait format (4:5). */

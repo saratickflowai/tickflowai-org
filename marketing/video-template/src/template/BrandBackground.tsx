@@ -18,7 +18,7 @@ export const BrandBackground: React.FC<{ showCornerLogo?: boolean; children?: Re
     {children}
     {showCornerLogo ? (
       <div style={{ position: 'absolute', top: 48, left: 56, opacity: 0.85 }}>
-        <Logo size={44} />
+        <Logo size={40} />
       </div>
     ) : null}
   </AbsoluteFill>

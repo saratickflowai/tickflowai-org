@@ -13,7 +13,7 @@ export const EndCard: React.FC<{ callToAction: string; smallLine: string }> = ({
     <BrandBackground showCornerLogo={false}>
       <AbsoluteFill style={{ justifyContent: 'center', alignItems: 'center', padding: 90, gap: 56 }}>
         <div style={popIn(frame, fps, 0)}>
-          <Logo size={150} />
+          <Logo size={130} />
         </div>
         <div
           style={{ ...enterUp(frame, fps, 10), fontSize: 68, fontWeight: 800, textAlign: 'center', lineHeight: 1.15 }}
