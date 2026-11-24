@@ -41,3 +41,31 @@ Pick tone and positioning (week 0 drafts). Confirm the trial link page. Weekly a
 - **Stretch target (extra, not required):** try to make some videos and posts go viral, reaching far more than the targets above. No promise. We test different hooks, and the Friday report names the best performers and why.
 - **Tone and positioning:** starting today I keep producing drafts in the two tones. Sara picks the tone and positioning template she likes and how to mix them.
 - **Where the calendar is:** `content/content-calendar-draft.md` in the shared project folder. Sara opens it from the file card on my messages, or from the project library.
+
+## 8. Posting times (added 25 Nov 2026, starting plan, to be tested)
+**Audience:** IT teams in Egypt first, then the Gulf. Egypt and Saudi Arabia work Sunday to Thursday. The UAE works Monday to Friday. All times below are Cairo time (UTC+2 in Nov and Dec). Saudi time is +1 hour, UAE time is +2 hours.
+
+**Honest note:** the page is new (4 followers), so there is no data about our own audience yet. These times are a starting plan from how IT and office people use LinkedIn (at the start of the workday and at lunch). We test them and keep what works.
+
+| Day | Item | Best time (Cairo) | Saudi / UAE | Why |
+|---|---|---|---|---|
+| Sun, Mon, Tue, Wed, Thu | Video or post | **9:30 AM** | 10:30 AM / 11:30 AM | Start of the workday in Egypt, mid-morning in the Gulf. Feed is checked with the first coffee. |
+| Fri | Light post | **10:00 AM** | 11:00 AM / 12:00 noon | Before Friday prayer time. Weekend in Egypt and Saudi Arabia, a short workday in the UAE. |
+| Sat | Light post | **8:00 PM** | 9:00 PM / 10:00 PM | People check the feed before the new work week starts on Sunday. |
+
+**Rules for every item**
+- Publish at the time above, by a founder, from the company page only.
+- Put the tracking link in the first comment right after publishing (within 1 minute).
+- Founders reply to comments in the first hour if possible. Social and Community prepares reply drafts.
+- Never publish two items in the same hour.
+
+**Test (decided at the day-14 check, Tue 8 Dec)**
+- Week 1 (28 Nov to 4 Dec): all items at the times above.
+- Week 2 (5 to 11 Dec): move items of the same type, in turn, to a second slot: **1:00 PM** (lunch time, Sun to Thu). Compare reach after 24 hours for each slot, using the weekly analytics export.
+- Keep the better slot. If the difference is small, keep 9:30 AM. Tone (Expert or Friendly) is tracked separately.
+- Do not change a time because of one single item. Use at least 3 items per slot.
+
+**First items**
+- Wed 25 Nov: intro post, 9:30 AM.
+- Thu 26 Nov: WhatsApp video, 9:30 AM.
+- Fri 27 Nov: tip post, 10:00 AM.
