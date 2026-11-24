@@ -38,7 +38,7 @@
 |---|---|---|---|
 | Tue 24 Nov | Stop-line email template (opt-out line and postal address) | Outreach Writer | Approve or remove the stop line |
 | Tue 24 to Wed 25 Nov | First 10 to 15 leads researched and verified | Lead Researcher, Lead Verifier | Look at the Skip list |
-| Wed 25 Nov | First 5 email drafts (sending is ON HOLD until there is a postal address, see section 7) | Outreach Writer | Approve. Send only after the address exists |
+| Wed 25 Nov | First 5 email drafts, on schedule. The footer needs a postal address (section 7) | Outreach Writer | Pick the address, approve and send |
 | Daily (sending days) | Next day's verified leads and drafts ready by 6 PM Cairo. Reply drafts the same day | Sales team | Approve and send (about 10 a day) |
 | Fri 27 Nov, 6 PM | Weekly report + plan for Sat 28 Nov to Fri 4 Dec: which leads, which day, which channel, who sends | Sales Director | Approve the week |
 | Fri 4 Dec | Standard demo kit: demo script and one-page summary (only Live features, public prices) | Demo and Proposal Prep | Approve |
@@ -59,7 +59,11 @@
 3. The stop-line template, then the first 5 emails.
 
 ## 7. Needs from Sara
-- **The postal address for the email footer** (required in every cold email). Sara has none yet (24 Nov). **No email is sent until an address exists.** Lead research, verification, the stop-line template and email drafts continue. The sending plan in section 3 moves to start on the first sending day after the address is ready.
+- **The postal address for the email footer.** Sara decided (24 Nov) that Sales starts on schedule. Sending emails without a postal address can break anti-spam rules (legal risk), so the first send needs one of these, chosen by Sara:
+  1. The company's registered address (or a founder's office address). No cost. Fastest.
+  2. A rented mailbox or virtual business address. Costs money, so both founders approve (record or skip with a reason is allowed).
+  3. A co-working space address that the company uses.
+  The agents prepare everything on schedule. A founder adds the chosen address to the footer before pressing send.
 - Apify: the connection fails in this project now. Research uses Apollo and ScrapeGraphAI until it works.
 - Vibe Prospecting stays paused until Sara says it works.
 - Reminder (D-52): the website legal pages are still hidden. Claude's open recommendation was to send only after they are published. Sara decided to send from 25 Nov; this stays a known risk shown to both founders.
