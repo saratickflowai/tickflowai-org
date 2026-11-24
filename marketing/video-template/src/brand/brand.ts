@@ -1,25 +1,30 @@
 /**
  * Brand settings for every TickFlowAI video.
- * PLACEHOLDER values until Sara sends the real logo and colors.
+ * Colors and fonts come from Sara's identity file. The logo is still a text placeholder until the SVG file arrives.
  * Change values here only; never inside a video.
  */
 export const BRAND = {
   name: 'TickFlowAI',
   colors: {
-    background: '#0B1B33',
-    surface: '#13294B',
-    primary: '#2F80ED',
-    accent: '#27C2A0',
-    text: '#FFFFFF',
-    textMuted: '#A9B8D0',
-    subtitleBg: 'rgba(0, 0, 0, 0.72)',
+    // From TickFlowAI identity file (tokens.css and logo files), 24 Nov 2026
+    background: '#0F1A43', // brand navy
+    backgroundDeep: '#05070F', // dark page background
+    surface: '#0B1020', // dark card
+    primary: '#1BB6A0', // brand teal (dark mode)
+    accent: '#2DD4BF', // brand teal text (dark mode)
+    mintStart: '#53E8AD', // logo gradient start
+    skyEnd: '#3DA9DB', // logo gradient end
+    logoTeal: '#00C7B1',
+    text: '#F0F2F8',
+    textMuted: '#9AA4BC',
+    subtitleBg: 'rgba(5, 7, 15, 0.78)',
     whatsappGreen: '#25D366',
     whatsappBubbleIn: '#FFFFFF',
-    whatsappBubbleOut: '#DCF8C6',
     whatsappChatBg: '#ECE5DD',
   },
   font: {
-    family: 'Inter, "Helvetica Neue", Arial, sans-serif',
+    family: 'Inter, system-ui, sans-serif',
+    arabic: '"IBM Plex Sans Arabic", Inter, system-ui, sans-serif',
   },
   /** Set to a file name in /public (for example 'logo.png') when the real logo arrives. */
   logoFile: null as string | null,

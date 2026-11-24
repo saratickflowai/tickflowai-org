@@ -1,36 +1,34 @@
 import React from 'react';
-import { AbsoluteFill, Series, useVideoConfig } from 'remotion';
+import { AbsoluteFill, Audio, Sequence, staticFile, useVideoConfig } from 'remotion';
 import { EndCard } from '../../template/EndCard';
-import { HookCard } from '../../template/HookCard';
+import { Scene } from '../../template/Scene';
 import { Subtitles } from '../../template/Subtitles';
 import { ChatScene } from './ChatScene';
 import { SCRIPT, SUBTITLES } from './script';
 import { TicketScene } from './TicketScene';
 
 /** Total length of video 001 in seconds. */
-export const V001_DURATION_SEC = Object.values(SCRIPT.timing).reduce((a, b) => a + b, 0);
+export const V001_DURATION_SEC = SCRIPT.totalSec;
 
-/** Video 001: WhatsApp requests become tickets (Expert tone). */
+/** Video 001: WhatsApp requests become tickets (Expert tone), with voice and English subtitles. */
 export const V001WhatsAppToTicket: React.FC = () => {
   const { fps } = useVideoConfig();
-  const t = SCRIPT.timing;
+  const sc = SCRIPT.scenes;
+  const part = (range: { from: number; to: number }, child: React.ReactNode) => {
+    const duration = Math.round((range.to - range.from) * fps);
+    return (
+      <Sequence from={Math.round(range.from * fps)} durationInFrames={duration}>
+        <Scene durationInFrames={duration}>{child}</Scene>
+      </Sequence>
+    );
+  };
   return (
-    <AbsoluteFill>
-      <Series>
-        <Series.Sequence durationInFrames={t.hook * fps}>
-          <HookCard text={SCRIPT.hook} />
-        </Series.Sequence>
-        <Series.Sequence durationInFrames={t.chat * fps}>
-          <ChatScene />
-        </Series.Sequence>
-        <Series.Sequence durationInFrames={t.ticket * fps}>
-          <TicketScene />
-        </Series.Sequence>
-        <Series.Sequence durationInFrames={t.end * fps}>
-          <EndCard callToAction={SCRIPT.endCard.callToAction} smallLine={SCRIPT.endCard.smallLine} />
-        </Series.Sequence>
-      </Series>
-      <Subtitles cues={SUBTITLES.filter((c) => c.startSec >= t.hook)} />
+    <AbsoluteFill style={{ background: '#05070F' }}>
+      <Audio src={staticFile(SCRIPT.voiceFile)} />
+      {part(sc.chat, <ChatScene />)}
+      {part(sc.ticket, <TicketScene />)}
+      {part(sc.end, <EndCard callToAction={SCRIPT.endCard.callToAction} smallLine={SCRIPT.endCard.smallLine} />)}
+      <Subtitles cues={SUBTITLES} />
     </AbsoluteFill>
   );
 };

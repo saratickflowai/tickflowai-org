@@ -19,9 +19,9 @@ export const TicketScene: React.FC = () => {
   const { fps } = useVideoConfig();
   const s = (sec: number) => Math.round(sec * fps);
 
-  const transcriptStart = s(4.6);
+  const transcriptStart = s(3.6);
   const transcriptChars = Math.floor(
-    interpolate(frame, [transcriptStart, transcriptStart + s(2.6)], [0, SCRIPT.ticket.transcript.length], {
+    interpolate(frame, [transcriptStart, transcriptStart + s(1.6)], [0, SCRIPT.ticket.transcript.length], {
       extrapolateLeft: 'clamp',
       extrapolateRight: 'clamp',
     }),
@@ -29,7 +29,7 @@ export const TicketScene: React.FC = () => {
 
   return (
     <BrandBackground>
-      <AbsoluteFill style={{ alignItems: 'center', paddingTop: 170 }}>
+      <AbsoluteFill style={{ alignItems: 'center', paddingTop: 200 }}>
         <div
           style={{
             ...popIn(frame, fps, 0),
@@ -52,14 +52,14 @@ export const TicketScene: React.FC = () => {
 
           <div style={{ height: 2, background: '#ffffff22', margin: '34px 0' }} />
 
-          <div style={enterUp(frame, fps, s(4.3))}>
+          <div style={enterUp(frame, fps, s(3.4))}>
             <SectionLabel>Voice note {SCRIPT.chat.voiceNoteLength} as text</SectionLabel>
             <div style={{ fontSize: 34, lineHeight: 1.4, minHeight: 140, background: '#ffffff10', borderRadius: 18, padding: '20px 26px' }}>
               {SCRIPT.ticket.transcript.slice(0, transcriptChars)}
             </div>
           </div>
 
-          <div style={{ ...enterUp(frame, fps, s(9.2)), marginTop: 34 }}>
+          <div style={{ ...enterUp(frame, fps, s(5.4)), marginTop: 34 }}>
             <SectionLabel>Agent reply</SectionLabel>
             <div style={{ fontSize: 34, lineHeight: 1.4, background: C.primary, borderRadius: 18, padding: '20px 26px' }}>
               {SCRIPT.ticket.agentReply}

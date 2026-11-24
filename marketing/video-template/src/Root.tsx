@@ -9,7 +9,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition
       id="v001-whatsapp-to-ticket"
       component={V001WhatsAppToTicket}
-      durationInFrames={V001_DURATION_SEC * VIDEO_FORMAT.fps}
+      durationInFrames={Math.round(V001_DURATION_SEC * VIDEO_FORMAT.fps)}
       fps={VIDEO_FORMAT.fps}
       width={VIDEO_FORMAT.width}
       height={VIDEO_FORMAT.height}
