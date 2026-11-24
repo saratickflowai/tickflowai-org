@@ -12,7 +12,8 @@
 |---|---|---|---|---|---|---|
 | TickFlowAI website | Public site (landing page) | https://tickflowai.com | Both founders | Not applicable | Existing | Live |
 | TickFlowAI DEV environment | Shared test environment for QA | https://dev.tickflowai.com | Both founders | DEV test-account passwords in a private `.env` file and pipeline secrets (QA project rule) | Existing | Live |
-| GitHub: TickFlowAI-QC | QA automation project | https://github.com/Sara-Magdyy/TickFlowAI-QC | Both founders | Connection (no password stored) | Existing | Live |
+| GitHub: TickFlowAI-QC | QA automation project | https://github.com/saratickflowai/TickFlowAI-QC (moved from Sara-Magdyy on 2026-11-24) | Both founders | Connection (no password stored) | Existing | Live |
+| GitHub: tickflowai-org | Agent definitions, companies, policies, plans, content drafts (private) | https://github.com/saratickflowai/tickflowai-org | Both founders | Connection (no password stored) | Free plan | Live |
 | Azure DevOps board | Tasks, bugs and requirements (epics, features, user stories) | To add | Both founders | Connection | Existing | Live |
 | HubSpot | CRM (leads) | To add | Both founders | Connection | Free plan | Connected |
 | Apollo | Lead data | To add | Both founders | Connection | Free plan | Connected |
