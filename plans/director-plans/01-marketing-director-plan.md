@@ -69,3 +69,17 @@ Pick tone and positioning (week 0 drafts). Confirm the trial link page. Weekly a
 - Wed 25 Nov: intro post, 9:30 AM.
 - Thu 26 Nov: WhatsApp video, 9:30 AM.
 - Fri 27 Nov: tip post, 10:00 AM.
+
+## 9. Update 25 Nov 2026: posting times after search (PROPOSED, decision D-112, needs Sara's OK)
+**What the search found.** There is no LinkedIn timing data for Egypt or the Gulf. Global studies disagree: Buffer (4.8 million posts, local time) says weekdays 3 to 8 PM, Wednesday best, and lower engagement for morning posts. Sprout Social says Tuesday to Thursday, 11 AM to 5 PM. Hootsuite (2025) says 8 to 9 AM on Tuesday and Wednesday. Only Wednesday is a day they all agree on. None of these studies is about Arab audiences, and Egypt and Saudi Arabia work Sunday to Thursday.
+**So the plan below is a test, not a fact.** The first 14 days of our own page data decide.
+
+| Day | Primary time (Cairo) | Fallback if not published by then | Saudi / UAE for primary |
+|---|---|---|---|
+| Sun to Thu | 1:00 PM | 4:00 PM the same day | 2:00 PM / 3:00 PM |
+| Fri | 3:00 PM | 6:00 PM | 4:00 PM / 5:00 PM |
+| Sat | 8:00 PM | 6:00 PM (earlier) or Sun 1:00 PM | 9:00 PM / 10:00 PM |
+
+- If the fallback time also passes, publish the next day at the primary time. Do not publish at night (after 10 PM).
+- Week 1 uses these times. Week 2 moves the same type of item to **9:30 AM** as the test slot. Decide at the day-14 check (8 Dec) from the analytics export, using at least 3 items per slot.
+- **Every weekly plan, and every post or video message, must show: day, time (Cairo) and fallback time.**
