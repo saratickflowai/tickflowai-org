@@ -97,11 +97,11 @@ export const Avatar: React.FC<{ letter: string; size?: number; bg?: string; colo
 export const Panel: React.FC<{ style?: React.CSSProperties; children: React.ReactNode }> = ({ style, children }) => (
   <div
     style={{
-      background: C.surface,
+      background: '#FFFFFF',
       borderRadius: 30,
       padding: '38px 44px',
-      border: '1.5px solid rgba(255,255,255,0.09)',
-      boxShadow: '0 40px 100px rgba(0,0,0,0.5)',
+      border: '1.5px solid rgba(15,26,67,0.09)',
+      boxShadow: '0 14px 40px rgba(15,26,67,0.10)',
       ...style,
     }}
   >
@@ -158,14 +158,14 @@ export const Cursor: React.FC<{
             width: 60,
             height: 60,
             borderRadius: 30,
-            border: `4px solid ${C.accent}`,
+            border: `4px solid ${C.primary}`,
             opacity: 1 - ripple,
             transform: `scale(${0.4 + ripple * 1.2})`,
           }}
         />
       ) : null}
-      <svg width="54" height="64" viewBox="0 0 54 64" style={{ filter: 'drop-shadow(0 6px 10px rgba(0,0,0,0.5))', transform: `scale(${frame >= clickF && frame < clickF + 5 ? 0.9 : 1})` }}>
-        <path d="M6 4 L6 50 L19 38 L28 58 L37 54 L28 35 L46 35 Z" fill="#fff" stroke="#111" strokeWidth="3" strokeLinejoin="round" />
+      <svg width="54" height="64" viewBox="0 0 54 64" style={{ filter: 'drop-shadow(0 6px 10px rgba(15,26,67,0.35))', transform: `scale(${frame >= clickF && frame < clickF + 5 ? 0.9 : 1})` }}>
+        <path d="M6 4 L6 50 L19 38 L28 58 L37 54 L28 35 L46 35 Z" fill="#fff" stroke="#0F1A43" strokeWidth="3" strokeLinejoin="round" />
       </svg>
     </div>
   );

@@ -1,5 +1,7 @@
 import React from 'react';
-import { Composition } from 'remotion';
+import { Composition, Still } from 'remotion';
+import { PostCard } from './template/PostCard';
+import { POST_CARDS } from './posts/week1';
 import { VIDEO_FORMAT } from './brand/brand';
 import { V001_DURATION_SEC, V001WhatsAppToTicket } from './videos/v001-whatsapp-to-ticket';
 import { V002_DURATION_SEC, V002TeamsApproval } from './videos/v002-teams-approval';
@@ -50,5 +52,8 @@ export const RemotionRoot: React.FC = () => (
       width={VIDEO_FORMAT.width}
       height={VIDEO_FORMAT.height}
     />
+    {(Object.keys(POST_CARDS) as (keyof typeof POST_CARDS)[]).map((id) => (
+      <Still key={id} id={id} component={() => <PostCard {...POST_CARDS[id]} />} width={VIDEO_FORMAT.width} height={VIDEO_FORMAT.height} />
+    ))}
   </>
 );

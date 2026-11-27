@@ -1,19 +1,19 @@
 import React from 'react';
 import { AbsoluteFill, Audio, staticFile } from 'remotion';
 import { BRAND } from '../../brand/brand';
-import { BrandBackground } from '../../template/BrandBackground';
-import { EndCard } from '../../template/EndCard';
+import { KineticHeadline, Kicker, L, LightBackground, LightEnd } from '../../template/Light';
+
 import { Subtitles } from '../../template/Subtitles';
-import { Chip, Headline, Panel, Part, Pop } from '../../template/ui';
+import { Chip, Panel, Part, Pop } from '../../template/ui';
 import { SCRIPT, SUBTITLES } from './script';
 
 const C = BRAND.colors;
 const CHANNEL_COLORS: Record<string, { bg: string; color: string }> = {
-  Email: { bg: 'rgba(61,169,219,0.18)', color: '#7CC8EE' },
-  Teams: { bg: 'rgba(91,95,199,0.28)', color: '#AEB1FF' },
-  WhatsApp: { bg: 'rgba(37,211,102,0.16)', color: '#4BE08A' },
-  Hallway: { bg: 'rgba(245,176,65,0.18)', color: '#F5B041' },
-  'Added by an agent': { bg: 'rgba(27,182,160,0.2)', color: C.accent },
+  Email: { bg: 'rgba(61,169,219,0.18)', color: '#0369A1' },
+  Teams: { bg: 'rgba(91,95,199,0.28)', color: '#4338CA' },
+  WhatsApp: { bg: 'rgba(37,211,102,0.16)', color: '#15803D' },
+  Hallway: { bg: 'rgba(245,176,65,0.18)', color: '#B45309' },
+  'Added by an agent': { bg: 'rgba(27,182,160,0.2)', color: L.tealDark },
 };
 
 const Card: React.FC<{ channel: string; text: string; tilt: number; atSec: number; top: number; left: number }> = ({
@@ -36,24 +36,26 @@ const Card: React.FC<{ channel: string; text: string; tilt: number; atSec: numbe
 
 /** Problem scene: three requests in three places. */
 const ScatterScene: React.FC = () => (
-  <BrandBackground>
-    <Headline text="Requests come from everywhere." />
-    <Card {...SCRIPT.scatter.email} tilt={-3} atSec={0.15} top={330} left={80} />
-    <Card {...SCRIPT.scatter.teams} tilt={2.5} atSec={1.25} top={600} left={300} />
-    <Card {...SCRIPT.scatter.hallway} tilt={-2} atSec={2.65} top={880} left={110} />
-  </BrandBackground>
+  <LightBackground>
+    <Kicker text="ONE PLACE FOR REQUESTS" />
+    <KineticHeadline lines={['Requests come', 'from everywhere.']} />
+    <Card {...SCRIPT.scatter.email} tilt={-3} atSec={0.15} top={440} left={80} />
+    <Card {...SCRIPT.scatter.teams} tilt={2.5} atSec={1.25} top={700} left={300} />
+    <Card {...SCRIPT.scatter.hallway} tilt={-2} atSec={2.65} top={940} left={110} />
+  </LightBackground>
 );
 
 /** Solution scene: one ticket list, rows slide in. */
 const ListScene: React.FC = () => (
-  <BrandBackground>
-    <Headline text={SCRIPT.list.title} top={150} />
-    <Pop atSec={4.3} style={{ position: 'absolute', left: 80, top: 330, width: 920 }}>
+  <LightBackground>
+    <Kicker text="ONE PLACE FOR REQUESTS" />
+    <KineticHeadline lines={['One ticket list']} />
+    <Pop atSec={4.3} style={{ position: 'absolute', left: 80, top: 380, width: 920 }}>
       <Panel style={{ padding: '34px 40px', minHeight: 640 }}>
-        <div style={{ fontSize: 26, fontWeight: 700, color: C.accent, letterSpacing: 0.6, marginBottom: 18 }}>TICKETS</div>
+        <div style={{ fontSize: 26, fontWeight: 700, color: L.tealDark, letterSpacing: 0.6, marginBottom: 18 }}>TICKETS</div>
         {SCRIPT.list.rows.map((row) => (
           <Pop key={row.text} atSec={row.at} style={{ marginBottom: 20 }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 22, background: 'rgba(255,255,255,0.05)', borderRadius: 20, padding: '22px 26px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 22, background: 'rgba(15,26,67,0.045)', borderRadius: 20, padding: '22px 26px' }}>
               <div style={{ width: 230, flexShrink: 0 }}>
                 <Chip bg={CHANNEL_COLORS[row.channel].bg} color={CHANNEL_COLORS[row.channel].color} size={22}>{row.channel}</Chip>
               </div>
@@ -63,7 +65,7 @@ const ListScene: React.FC = () => (
         ))}
       </Panel>
     </Pop>
-  </BrandBackground>
+  </LightBackground>
 );
 
 export const V003_DURATION_SEC = SCRIPT.totalSec;
@@ -75,7 +77,7 @@ export const V003OneTicketList: React.FC = () => (
     <Part from={SCRIPT.scenes.scatter.from} to={SCRIPT.scenes.scatter.to}><ScatterScene /></Part>
     <Part from={SCRIPT.scenes.list.from} to={SCRIPT.scenes.list.to}><ListScene /></Part>
     <Part from={SCRIPT.scenes.end.from} to={SCRIPT.scenes.end.to}>
-      <EndCard callToAction={SCRIPT.endCard.callToAction} smallLine={SCRIPT.endCard.smallLine} />
+      <LightEnd callToAction={SCRIPT.endCard.callToAction} smallLine={SCRIPT.endCard.smallLine} />
     </Part>
     <Subtitles cues={SUBTITLES} />
   </AbsoluteFill>
