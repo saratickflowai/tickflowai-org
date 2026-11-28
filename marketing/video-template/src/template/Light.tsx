@@ -2,6 +2,7 @@ import React from 'react';
 import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame, useVideoConfig } from 'remotion';
 import { BRAND } from '../brand/brand';
 import { enterUp, popIn } from './animations';
+import { Camera } from './Motion';
 
 /** Light style (Sara, 27 Nov 2026): same look as the Friday tip graphic. White cards, navy text, teal accents. */
 export const L = {
@@ -62,8 +63,28 @@ export const LightBackground: React.FC<{ showLogo?: boolean; children?: React.Re
           opacity: 0.6,
         }}
       />
+      {[0, 1, 2, 3, 4, 5].map((i) => {
+        const x = [90, 960, 200, 880, 520, 40][i];
+        const y = [700, 420, 1180, 900, 1290, 1000][i];
+        const size = [46, 30, 36, 54, 24, 28][i];
+        return (
+          <div
+            key={i}
+            style={{
+              position: 'absolute',
+              left: x + Math.sin(frame / 38 + i * 1.7) * 26,
+              top: y + Math.cos(frame / 44 + i) * 34 - ((frame * (0.25 + i * 0.05)) % 60),
+              width: size,
+              height: size,
+              borderRadius: i % 2 ? size / 2 : size / 4,
+              border: `4px solid ${i % 2 ? 'rgba(27,182,160,0.35)' : 'rgba(61,169,219,0.35)'}`,
+              transform: `rotate(${frame * (i % 2 ? 1.2 : -0.9)}deg)`,
+            }}
+          />
+        );
+      })}
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 12, background: `linear-gradient(90deg, ${BRAND.colors.mintStart}, ${BRAND.colors.skyEnd})` }} />
-      {children}
+      <Camera>{children}</Camera>
       {showLogo ? (
         <div style={{ position: 'absolute', top: 52, right: 64 }}>
           <LightLogo size={44} />
@@ -98,13 +119,14 @@ export const KineticHeadline: React.FC<{ lines: readonly string[]; top?: number;
           {line.split(' ').map((word) => {
             const start = 4 + index++ * 4;
             return (
-              <span key={index} style={{ display: 'inline-block', marginRight: '0.28em', ...enterUp(frame, fps, start) }}>
+              <span key={index} style={{ display: 'inline-block', marginRight: '0.28em', filter: `blur(${interpolate(frame, [start, start + 10], [10, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' })}px)`, ...enterUp(frame, fps, start) }}>
                 {word}
               </span>
             );
           })}
         </div>
       ))}
+      <div style={{ marginTop: 14, height: 10, borderRadius: 5, width: interpolate(frame, [18, 40], [0, 300], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }), background: `linear-gradient(90deg, ${BRAND.colors.mintStart}, ${BRAND.colors.skyEnd})` }} />
     </div>
   );
 };
@@ -138,6 +160,10 @@ export const LightEnd: React.FC<{ callToAction: string; smallLine: string }> = (
   const { fps } = useVideoConfig();
   return (
     <LightBackground showLogo={false}>
+      <div style={{ position: 'absolute', left: 540, top: 470, width: 10, height: 10, marginLeft: -5, marginTop: -5, borderRadius: '50%', background: L.mint, transform: `scale(${interpolate(frame, [0, 22], [0, 260], { extrapolateRight: 'clamp' })})`, opacity: interpolate(frame, [0, 22, 40], [0.9, 0.9, 0], { extrapolateRight: 'clamp' }) }} />
+      {[0, 1].map((i) => (
+        <div key={i} style={{ position: 'absolute', left: 540 - 220, top: 470 - 220, width: 440, height: 440, borderRadius: 220, border: `5px solid ${L.teal}`, opacity: Math.max(0, 0.5 - (((frame + i * 30) % 60) / 60) * 0.5), transform: `scale(${0.5 + (((frame + i * 30) % 60) / 60) * 1.1})` }} />
+      ))}
       <AbsoluteFill style={{ justifyContent: 'center', alignItems: 'center', padding: 80, gap: 52 }}>
         <div style={popIn(frame, fps, 0)}>
           <LightLogo size={120} />

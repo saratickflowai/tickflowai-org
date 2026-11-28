@@ -1,21 +1,30 @@
-# Marketing package: week 1, Sat 28 Nov to Fri 4 Dec 2026 (REVISED, DRAFT, waiting for Sara)
+# Marketing package: week 1, Sat 28 Nov to Fri 4 Dec 2026 (REVISED v2, DRAFT, waiting for Sara)
 Revised Fri 27 Nov after Sara's notes. It replaces the first package.
 Company LinkedIn page only (id 147035009). A founder publishes. Nothing goes out before Sara says OK.
 
 ## What changed
 - Posts now follow the Friday tip post: an observation first, plain words, short, one light graphic card in the same style. The product is mentioned softly in the page's first comment.
 - All 4 videos are light style with motion graphics (moving background, word-by-word headlines, pop-in cards, a cursor that clicks). The voice-over and subtitles are the same as before.
+- Motion graphics are much stronger in v2: slow camera push, pings when a request arrives, flying cards, a progress ring while the directory syncs, an SLA timer ring, confetti on success, and a clear opening and ending. Video 002 opens with a Teams notification, 003 has requests flying in and a live count, 004 has a sync ring and a counter, 005 has floating agents and a timer ring.
+- The burned-in captions are removed from all 4 videos (Sara's note). The voice-over stays. The .srt files are removed.
+- Our page now has Premium. The plan is in `premium-page-plan.md` (what it gives, week by week, what we measure, what I need from Sara).
 - Publish day, Cairo time and fallback time of every item are unchanged.
+
+## Weekly target check (Sara's targets: 4 videos and 3 posts every week)
+| Week | Videos (4) | Posts (3) |
+|---|---|---|
+| Week 1: Sat 28 Nov to Fri 4 Dec | 002 Sun, 003 Tue, 004 Wed, 005 Thu: 4 of 4 | Sat, Mon, Fri: 3 of 3 |
+Videos fall on Sun, Tue, Wed, Thu at 1:00 PM. Posts fall on Sat 8:00 PM, Mon 1:00 PM and Fri 3:00 PM. Video 001 (Thu 26 Nov) and the Friday tip post (27 Nov) were published before this week and are not counted here. Weeks 2 to 4 follow the same count. I send each plan on Friday 6 PM.
 
 ## Calendar (Cairo time, D-112)
 | Day | Item | Tone | Publish | Fallback | Files |
 |---|---|---|---|---|---|
 | Sat 28 Nov | POST: one ticket, first message to confirmed fix | Expert | 8:00 PM | Sun 29 Nov 1:00 PM | post-sat-one-ticket.png |
-| Sun 29 Nov | VIDEO 002: approve from Microsoft Teams | Friendly | 1:00 PM | 4:00 PM | v002-teams-approval.mp4 / .srt |
+| Sun 29 Nov | VIDEO 002: approve from Microsoft Teams | Friendly | 1:00 PM | 4:00 PM | v002-teams-approval.mp4 |
 | Mon 30 Nov | POST: permission checks | Expert | 1:00 PM | 4:00 PM | post-mon-permissions.png |
-| Tue 1 Dec | VIDEO 003: one ticket list | Friendly | 1:00 PM | 4:00 PM | v003-one-ticket-list.mp4 / .srt |
-| Wed 2 Dec | VIDEO 004: Microsoft sign-in and directory sync | Expert | 1:00 PM | 4:00 PM | v004-microsoft-sign-in.mp4 / .srt |
-| Thu 3 Dec | VIDEO 005: who owns this ticket | Friendly | 1:00 PM | 4:00 PM | v005-ticket-owner.mp4 / .srt |
+| Tue 1 Dec | VIDEO 003: one ticket list | Friendly | 1:00 PM | 4:00 PM | v003-one-ticket-list.mp4 |
+| Wed 2 Dec | VIDEO 004: Microsoft sign-in and directory sync | Expert | 1:00 PM | 4:00 PM | v004-microsoft-sign-in.mp4 |
+| Thu 3 Dec | VIDEO 005: who owns this ticket | Friendly | 1:00 PM | 4:00 PM | v005-ticket-owner.mp4 |
 | Fri 4 Dec | POST: requests start in a chat | Expert | 3:00 PM | 6:00 PM | post-fri-channels.png |
 
 Why this mix (content-strategy): three pillars. (1) Where requests come from (Sat, Tue, Fri). (2) Doing the work inside the tools people already use (Sun, Wed). (3) Clear ownership and quality (Mon, Thu). Each item has one idea. Tones alternate. No question posts yet.
@@ -42,7 +51,7 @@ In TickFlowAI the approval arrives in Microsoft Teams. The approver reads it and
 
 First comment (page): The 14-day free trial: [TRIAL LINK]
 
-Skills used: video (hook in 2 seconds, one idea, subtitles for silent play), social, copywriting, copy-editing, marketing-psychology (less effort), content-strategy (pillar 2).
+Skills used: video (hook in 2 seconds, one idea, motion graphics), social, copywriting, copy-editing, marketing-psychology (less effort), content-strategy (pillar 2).
 
 ### 3. Mon 30 Nov, 1:00 PM (fallback 4:00 PM). POST, Expert
 A permission mistake is easy to miss. Someone sees a screen they should not see, or cannot open one they need.
@@ -101,6 +110,7 @@ Skills used: social, copywriting, copy-editing, marketing-psychology, content-st
 
 ## Notes
 - The ticket, Teams and sign-in screens in the videos are drawn examples, not real product screenshots. Names in video 004 are made up.
+- Without captions the videos rely on the voice-over and on-screen words. Please watch them with sound.
 - Humanize needs a voice profile and none exists yet, so I used the Friday tip post as the voice model.
 - Video end card says "No credit card. Link in the comments." Please confirm it, or I remove it before you publish.
 
@@ -111,4 +121,5 @@ Skills used: social, copywriting, copy-editing, marketing-psychology, content-st
 4. By Thu 3 Dec: one real sentence on why you started building TickFlowAI (Fri 4 Dec post).
 5. LinkedIn numbers when you can (reach per post, followers). First full export due Fri 4 Dec.
 6. Final page name (TickFlowAI or RoboMate TickFlowAI) and the public page URL.
-7. Keep the ElevenLabs connector connected (needed for new voice-overs next week).
+7. Open the page admin view and tell me which Premium tools you see, and which billing you chose (see premium-page-plan.md, section 5).
+8. Keep the ElevenLabs connector connected (needed for new voice-overs next week).

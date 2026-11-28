@@ -3,8 +3,8 @@ import { AbsoluteFill, Audio, interpolate, staticFile, useCurrentFrame } from 'r
 import { BRAND } from '../../brand/brand';
 import { KineticHeadline, Kicker, L, LightBackground, LightEnd } from '../../template/Light';
 
-import { Subtitles } from '../../template/Subtitles';
 import { Avatar, Chip, Cursor, Panel, Part, Pop, useVideoFrame } from '../../template/ui';
+import { Burst, CountUp, Fly, Ping, Ring, Shine } from '../../template/Motion';
 import { SCRIPT, SUBTITLES } from './script';
 
 const C = BRAND.colors;
@@ -53,10 +53,17 @@ const SignInScene: React.FC = () => {
               gap: 18,
             }}
           >
-            {signedIn ? 'Signed in ✓' : 'Sign in with Microsoft Entra ID'}
+            {signedIn ? 'Signed in ✓' : (
+              <>
+                <svg width="40" height="40" viewBox="0 0 40 40"><rect x="2" y="2" width="17" height="17" fill="#F25022" /><rect x="21" y="2" width="17" height="17" fill="#7FBA00" /><rect x="2" y="21" width="17" height="17" fill="#00A4EF" /><rect x="21" y="21" width="17" height="17" fill="#FFB900" /></svg>
+                Sign in with Microsoft Entra ID
+              </>
+            )}
           </div>
         </Panel>
       </Pop>
+      <Ping x={640} y={622} atSec={3.7} color="#00A4EF" size={220} />
+      <Burst x={640} y={622} atSec={SIGNIN_CLICK} check={false} />
       <Cursor from={{ x: 820, y: 900 }} to={{ x: 640, y: 622 }} startSec={4.3} endSec={5.0} clickSec={SIGNIN_CLICK} />
     </LightBackground>
   );
@@ -71,19 +78,27 @@ const SyncScene: React.FC = () => {
     <LightBackground>
       <Kicker text="DIRECTORY SYNC" />
       <KineticHeadline lines={['Sync your directory.']} />
-      <Pop atSec={6.0} style={{ position: 'absolute', left: 80, top: 380, width: 920 }}>
-        <Panel style={{ minHeight: 700 }}>
+      <Fly atSec={5.9} dx={0} dy={60} style={{ position: 'absolute', right: 80, top: 250 }}>
+        <Ring size={150} stroke={14} progress={(frame - 6.0 * 30) / (2.4 * 30)} color={confirmed ? '#15803D' : L.teal}>
+          <div style={{ fontSize: 44, fontWeight: 800, color: L.navy }}>
+            <CountUp from={0} to={SCRIPT.people.length} startSec={6.0} endSec={8.4} />
+          </div>
+        </Ring>
+      </Fly>
+      <Pop atSec={6.0} style={{ position: 'absolute', left: 80, top: 440, width: 920 }}>
+        <Panel style={{ minHeight: 660, position: 'relative' }}>
+          <Shine atSec={6.3} />
           {SCRIPT.people.map((p) => (
             <Pop key={p.initials} atSec={p.at} style={{ marginBottom: 18 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 22, background: 'rgba(15,26,67,0.045)', borderRadius: 20, padding: '18px 26px' }}>
                 <Avatar letter={p.initials} size={64} bg="rgba(15,26,67,0.10)" color={C.text} />
                 <div style={{ flex: 1, fontSize: 34, fontWeight: 600 }}>{p.role}</div>
                 {confirmed ? (
-                  <Chip bg="rgba(37,211,102,0.16)" color="#4BE08A">Confirmed ✓</Chip>
+                  <Chip bg="rgba(22,163,74,0.14)" color="#15803D">Confirmed ✓</Chip>
                 ) : reviewed ? (
-                  <Chip bg="rgba(245,176,65,0.18)" color="#F5B041">New user</Chip>
+                  <Chip bg="rgba(217,119,6,0.14)" color="#B45309">New user</Chip>
                 ) : (
-                  <Chip bg="rgba(61,169,219,0.18)" color="#7CC8EE">Found</Chip>
+                  <Chip bg="rgba(2,132,199,0.12)" color="#0369A1">Found</Chip>
                 )}
               </div>
             </Pop>
@@ -95,6 +110,7 @@ const SyncScene: React.FC = () => {
           </Pop>
         </Panel>
       </Pop>
+      <Burst x={540} y={1110} atSec={CONFIRM_CLICK} check={false} />
       <Cursor from={{ x: 800, y: 1170 }} to={{ x: 520, y: 1110 }} startSec={9.3} endSec={9.95} clickSec={CONFIRM_CLICK} />
     </LightBackground>
   );
@@ -113,7 +129,6 @@ export const V004MicrosoftSignIn: React.FC = () => {
       <Part from={SCRIPT.scenes.end.from} to={SCRIPT.scenes.end.to}>
         <LightEnd callToAction={SCRIPT.endCard.callToAction} smallLine={SCRIPT.endCard.smallLine} />
       </Part>
-      <Subtitles cues={SUBTITLES} />
     </AbsoluteFill>
   );
 };
