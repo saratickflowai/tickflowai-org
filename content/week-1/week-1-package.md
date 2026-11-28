@@ -23,11 +23,13 @@ Videos fall on Sun, Tue, Wed, Thu at 1:00 PM. Posts fall on Sat 8:00 PM, Mon 1:0
 | Sun 29 Nov | VIDEO 002: approve from Microsoft Teams | Friendly | 1:00 PM | 4:00 PM | v002-teams-approval.mp4 |
 | Mon 30 Nov | POST: permission checks | Expert | 1:00 PM | 4:00 PM | post-mon-permissions.png |
 | Tue 1 Dec | VIDEO 003: one ticket list | Friendly | 1:00 PM | 4:00 PM | v003-one-ticket-list.mp4 |
-| Wed 2 Dec | VIDEO 004: Microsoft sign-in and directory sync | Expert | 1:00 PM | 4:00 PM | v004-microsoft-sign-in.mp4 |
+| Wed 2 Dec | VIDEO 004 (new, idea A with the review gate): Microsoft sign-in and directory sync | Expert | 1:00 PM | 4:00 PM | v004-microsoft-sign-in.mp4 (the first version is in archive/) |
 | Thu 3 Dec | VIDEO 005: who owns this ticket | Friendly | 1:00 PM | 4:00 PM | v005-ticket-owner.mp4 |
 | Fri 4 Dec | POST: requests start in a chat | Expert | 3:00 PM | 6:00 PM | post-fri-channels.png |
 
 Why this mix (content-strategy): three pillars. (1) Where requests come from (Sat, Tue, Fri). (2) Doing the work inside the tools people already use (Sun, Wed). (3) Clear ownership and quality (Mon, Thu). Each item has one idea. Tones alternate. No question posts yet.
+
+Extra: `v004c-real-windows.mp4` is a second version of video 004 in the "real windows" style (idea C). It has the same voice-over and is not scheduled. Sara decides which one runs on Wed 2 Dec and where the other goes.
 
 ## Texts (copy and paste). Add the graphic or video to each post.
 
